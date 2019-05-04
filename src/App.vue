@@ -1,14 +1,6 @@
 <template>
   <div id="app">
-    <transition
-      enter-active-class="animated fadeIn"
-      leave-active-class="animated fadeOut"
-      mode="out-in"
-      :duration="200"
-      @after-leave="$root.$emit('triggerScroll')"
-    >
-      <router-view />
-    </transition>
+    <router-view />
   </div>
 </template>
 

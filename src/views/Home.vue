@@ -53,7 +53,9 @@ export default {
   },
   methods: {
     goToAnchor(anchor) {
-      this.$router.push({ name: "home", hash: "#" + anchor.id });
+      const name = this.$route.name;
+      const hash = "#" + anchor.id;
+      this.$router.push({ name, hash });
     }
   }
 };
