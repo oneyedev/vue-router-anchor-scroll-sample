@@ -1,29 +1,9 @@
 # vue-router-anchor-scroll-sample
 
-## Project setup
-```
-npm install
-```
+This is a sample vue-router-anchor project. you can see all steps here - [Create document bookmark anchor](https://oneyedev.github.io/article?id=create-document-bookmark-anchor)
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## Preview
+https://oneyedev.github.io/vue-router-anchor-scroll-sample
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+## License
+This project is released under MIT License. See [LICENSE](https://github.com/oneyedev/vue-showdown-highlight-sample/blob/master/LICENSE) file for details.
