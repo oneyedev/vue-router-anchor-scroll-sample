@@ -1,6 +1,10 @@
 <template>
   <div class="home">
-    This is vue router anchor scroll sample!
+    <div class="notice">
+      This is Anchor index html sample page. Look at right down control. Click a
+      section where you want to go. Browser will be jump to selected section.
+      <br />Smooth scrolling sample is <a :href="`smooth`">here</a>
+    </div>
     <h1 id="section1">section1</h1>
     Lorem ipsum litora lacinia phasellus aenean placerat phasellus, urna sed
     cubilia convallis cubilia feugiat nec feugiat, diam eu proin feugiat
@@ -53,15 +57,17 @@ export default {
   },
   methods: {
     goToAnchor(anchor) {
-      const name = this.$route.name;
-      const hash = "#" + anchor.id;
-      this.$router.push({ name, hash });
+      const top = anchor.offsetTop;
+      window.scrollTo(0, top);
     }
   }
 };
 </script>
 
 <style scoped>
+.notice {
+  font-size: 1.2rem;
+}
 .index {
   position: fixed;
   font-size: 1.2rem;

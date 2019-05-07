@@ -1,6 +1,30 @@
 <template>
   <div class="home">
-    This is vue router anchor scroll sample!
+    <div class="notice">
+      This is Smooth scroll html sample page. Look at right down control.
+      <ol>
+        <li>Select a section where you want to go</li>
+        <li>Select a method how scroll behavior is</li>
+        <ul>
+          <li>
+            direct: Jump to selected section. Not smoothly.
+          </li>
+          <li>constant speed: Move at a constant pixels per frame</li>
+          <li>
+            constant frame: Move at a constant frame(similar with constant time)
+          </li>
+          <li>
+            via router: Same with scrolling constant 10px per frame speed.
+            Difference is only hooking via vue router.
+          </li>
+        </ul>
+        <li>
+          Click a 'Go' Button. Browser will be scroll to selected section
+          smoothly
+        </li>
+      </ol>
+    </div>
+
     <h1 id="section1">section1</h1>
     Lorem ipsum litora lacinia phasellus aenean placerat phasellus, urna sed
     cubilia convallis cubilia feugiat nec feugiat, diam eu proin feugiat
@@ -62,7 +86,7 @@ export default {
   data: () => ({
     anchors: [],
     where: "section3",
-    how: "direct",
+    how: "speed",
     speed: 5,
     frame: 120
   }),
@@ -126,6 +150,10 @@ export default {
 </script>
 
 <style scoped>
+.notice {
+  font-size: 1.2rem;
+}
+
 .control_area {
   position: fixed;
   right: 20px;
