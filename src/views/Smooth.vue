@@ -40,6 +40,7 @@
           <option value="direct">Direct</option>
           <option value="speed">Constant Speed</option>
           <option value="frame">Constant Frame</option>
+          <option value="router">Via Router</option>
         </select>
       </div>
       <div class="control_section speed" v-if="how === 'speed'">
@@ -81,6 +82,8 @@ export default {
         this.moveByConstantSpeed(this.selected, this.speed);
       } else if (this.how === "frame") {
         this.moveByConstantFrame(this.selected, this.frame);
+      } else if (this.how === "router") {
+        this.moveByRouter(this.selected);
       }
     },
     moveByDirect(target) {
@@ -112,6 +115,11 @@ export default {
       const distance = Math.abs(target.getBoundingClientRect().top);
       const speed = distance / time;
       this.moveByConstantSpeed(target, speed);
+    },
+    moveByRouter(target) {
+      const name = this.$route.name;
+      const hash = "#" + target.id;
+      this.$router.push({ name, hash });
     }
   }
 };
