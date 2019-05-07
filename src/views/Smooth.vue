@@ -135,9 +135,9 @@ export default {
         step(currentTime, window.performance.now())
       );
     },
-    moveByConstantFrame(target, time) {
+    moveByConstantFrame(target, frame) {
       const distance = Math.abs(target.getBoundingClientRect().top);
-      const speed = distance / time;
+      const speed = distance / frame;
       this.moveByConstantSpeed(target, speed);
     },
     moveByRouter(target) {
