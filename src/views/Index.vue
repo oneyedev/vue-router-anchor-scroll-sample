@@ -49,7 +49,7 @@ export default {
     anchors: []
   }),
   mounted() {
-    this.anchors = [{ id: "top" }, ...document.querySelectorAll("h1")];
+    this.anchors = [...document.querySelectorAll("h1")];
   },
   methods: {
     goToAnchor(anchor) {
